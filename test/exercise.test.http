@@ -1,0 +1,13 @@
+# Create Exercise
+POST http://localhost:5000/api/exercise/create HTTP/1.1
+content-type: application/json
+
+{
+    "name": "Bench Press",
+    "targetMuscle": "Chest"
+}
+
+###
+# Get All Exercises
+GET http://localhost:5000/api/exercise/get-all HTTP/1.1
+

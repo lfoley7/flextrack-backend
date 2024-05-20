@@ -1,0 +1,50 @@
+# Signup: Success
+POST http://localhost:5000/api/user/signup HTTP/1.1
+content-type: application/json
+
+{
+    "username": "test",
+    "email": "test@gmail.com",
+    "password": "1234"
+}
+
+###
+# Signup: Fail [Email already exists]
+POST http://localhost:5000/api/user/signup HTTP/1.1
+content-type: application/json
+
+{
+    "username": "test",
+    "email": "test@gmail.com",
+    "password": "1234"
+}
+
+###
+# Login: Success
+POST http://localhost:5000/api/user/login HTTP/1.1
+content-type: application/json
+
+{
+    "email": "test@gmail.com",
+    "password": "1234"
+}
+
+###
+# Login: Fail [Wrong Email]
+POST http://localhost:5000/api/user/login HTTP/1.1
+content-type: application/json
+
+{
+    "email": "test1@gmail.com",
+    "password": "1234"
+}
+
+###
+# Login: Fail [Wrong Password]
+POST http://localhost:5000/api/user/login HTTP/1.1
+content-type: application/json
+
+{
+    "email": "test@gmail.com",
+    "password": "12345"
+}

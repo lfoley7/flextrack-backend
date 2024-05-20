@@ -1,0 +1,48 @@
+# Create Workout Plan
+POST http://localhost:5000/api/workout/create HTTP/1.1
+content-type: application/json
+
+{
+    "name": "PPL"
+}
+
+###
+# Get All Workout Plans
+GET http://localhost:5000/api/workout/get-all HTTP/1.1
+
+###
+# Add Sessions to Workout Plan
+POST http://localhost:5000/api/workout/add-sessions HTTP/1.1
+content-type: application/json
+
+{
+    "sessions": [
+        {
+            "day_of_week": "Monday", 
+            "workout_type": "Push", 
+            "sets": [
+                {
+                    "set_number": 1,
+                    "exercise_id": 1,
+                    "target_weight": 135,
+                    "target_reps": 12
+                },
+                {
+                    "set_number": 2,
+                    "exercise_id": 1,
+                    "target_weight": 155,
+                    "target_reps": 10
+                }
+            ]
+        },
+        {
+            "day_of_week": "Tuesday", 
+            "workout_type": "Pull", 
+            "sets": [
+
+            ]
+        }
+    ],
+    "plan_id": 1
+}
+
